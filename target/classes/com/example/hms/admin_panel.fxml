@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="anchor_pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="695.0" prefWidth="1147.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.hms.AdminPanel">
+   <children>
+      <StackPane layoutX="390.0" layoutY="-7.0" prefHeight="701.0" prefWidth="755.0">
+         <children>
+            <Pane fx:id="pan_manager" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #6df276;">
+               <children>
+                  <Button layoutX="233.0" layoutY="291.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="128.0" text="Update" />
+                  <Button layoutX="402.0" layoutY="292.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="128.0" text="Delete" />
+                  <Button layoutX="581.0" layoutY="289.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="128.0" text="View " />
+                  <Button layoutX="73.0" layoutY="289.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="128.0" text="Create" />
+                  <TableView layoutX="2.0" layoutY="354.0" prefHeight="347.0" prefWidth="755.0">
+                     <columns>
+                        <TableColumn prefWidth="94.39999389648438" text="ID" />
+                        <TableColumn prefWidth="300.0000305175781" text="Name" />
+                        <TableColumn minWidth="0.0" prefWidth="186.66668701171875" text="username" />
+                        <TableColumn prefWidth="174.13330078125" text="passoword" />
+                     </columns>
+                  </TableView>
+                  <Label contentDisplay="TOP" layoutX="139.0" layoutY="21.0" prefHeight="37.0" prefWidth="443.0" style="-fx-alignment: center;" text=" Managers List">
+                     <font>
+                        <Font name="Verdana" size="20.0" />
+                     </font></Label>
+                  <Label layoutX="68.0" layoutY="91.0" text="ID:">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="66.0" layoutY="124.0" text="Name">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="68.0" layoutY="163.0" prefHeight="27.0" prefWidth="163.0" text="Username">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <TextField layoutX="290.0" layoutY="80.0" prefHeight="25.0" prefWidth="172.0" />
+                  <TextField layoutX="288.0" layoutY="165.0" prefHeight="25.0" prefWidth="173.0" />
+                  <Label layoutX="69.0" layoutY="200.0" prefHeight="28.0" prefWidth="115.0" text="Password">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <TextField layoutX="288.0" layoutY="204.0" prefHeight="25.0" prefWidth="173.0" />
+                  <TextField layoutX="288.0" layoutY="125.0" prefHeight="25.0" prefWidth="172.0" />
+               </children></Pane>
+            <Pane fx:id="pan_booking" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white;">
+               <children>
+                  <Label layoutX="103.0" layoutY="164.0" text="Booking List Should be here">
+                     <font>
+                        <Font size="48.0" />
+                     </font>
+                  </Label>
+               </children></Pane>
+            <Pane fx:id="pan_receptionist" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #deb318;">
+               <children>
+                  <Button fx:id="btn_update" layoutX="233.0" layoutY="291.0" mnemonicParsing="false" onAction="#re_update" prefHeight="37.0" prefWidth="128.0" text="Update" />
+                  <Button fx:id="btn_delete" layoutX="402.0" layoutY="292.0" mnemonicParsing="false" onAction="#re_delete" prefHeight="37.0" prefWidth="128.0" text="Delete" />
+                  <Button fx:id="btn_view" layoutX="581.0" layoutY="289.0" mnemonicParsing="false" onAction="#re_view" prefHeight="37.0" prefWidth="128.0" text="View " />
+                  <Button fx:id="btn_insert" layoutX="73.0" layoutY="289.0" mnemonicParsing="false" onAction="#re_insert" prefHeight="37.0" prefWidth="128.0" text="Insert" />
+                  <TableView fx:id="recep_table" layoutX="2.0" layoutY="354.0" prefHeight="347.0" prefWidth="755.0">
+                     <columns>
+                        <TableColumn fx:id="recep_tableID" prefWidth="94.39999389648438" text="ID" />
+                        <TableColumn fx:id="recep_tablename" prefWidth="300.0000305175781" text="Name" />
+                        <TableColumn fx:id="recep_tableusername" minWidth="0.0" prefWidth="186.66668701171875" text="username" />
+                        <TableColumn fx:id="recep_tablepassword" prefWidth="174.13330078125" text="passoword" />
+                     </columns>
+                  </TableView>
+                  <Label contentDisplay="TOP" layoutX="139.0" layoutY="21.0" prefHeight="37.0" prefWidth="443.0" style="-fx-alignment: center;" text="Receptionists List">
+                     <font>
+                        <Font name="Verdana" size="20.0" />
+                     </font></Label>
+                  <Label layoutX="68.0" layoutY="91.0" text="ID:">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="66.0" layoutY="124.0" text="Name">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="68.0" layoutY="163.0" prefHeight="27.0" prefWidth="163.0" text="Username">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="recep_id" layoutX="290.0" layoutY="80.0" prefHeight="25.0" prefWidth="172.0" />
+                  <TextField fx:id="recep_un" layoutX="288.0" layoutY="165.0" prefHeight="25.0" prefWidth="173.0" />
+                  <Label layoutX="69.0" layoutY="200.0" prefHeight="28.0" prefWidth="115.0" text="Password">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="recep_pw" layoutX="288.0" layoutY="204.0" prefHeight="25.0" prefWidth="173.0" />
+                  <TextField fx:id="recep_name" layoutX="288.0" layoutY="125.0" prefHeight="25.0" prefWidth="172.0" />
+               </children></Pane>
+            <Pane fx:id="pan_rooms" style="-fx-background-color: #24a39d;">
+               <children>
+                  <Button fx:id="btn_room_update" layoutX="233.0" layoutY="291.0" mnemonicParsing="false" onAction="#room_update" prefHeight="37.0" prefWidth="128.0" text="Update" />
+                  <Button fx:id="btn_room_delete" layoutX="402.0" layoutY="292.0" mnemonicParsing="false" onAction="#room_delete" prefHeight="37.0" prefWidth="128.0" text="Delete" />
+                  <Button fx:id="btn_room_view" layoutX="581.0" layoutY="289.0" mnemonicParsing="false" onAction="#room_view" prefHeight="37.0" prefWidth="128.0" text="View " />
+                  <Button fx:id="btn_room_insert" layoutX="73.0" layoutY="289.0" mnemonicParsing="false" onAction="#room_insert" prefHeight="37.0" prefWidth="128.0" text="Create" />
+                  <TableView fx:id="room_table" layoutX="2.0" layoutY="354.0" prefHeight="347.0" prefWidth="755.0">
+                    <columns>
+                      <TableColumn fx:id="room_tableID" prefWidth="100.00003051757812" text="Room ID" />
+                      <TableColumn fx:id="room_tabletype" prefWidth="211.46673583984375" text="Room Type" />
+                        <TableColumn fx:id="room_tabletelephone" minWidth="0.0" prefWidth="135.7332763671875" text="Telephone Available" />
+                        <TableColumn fx:id="room_tabletelevision" prefWidth="165.3333740234375" text="Television Available" />
+                        <TableColumn fx:id="room_tableExclusiveView" prefWidth="141.86669921875" text="Exclusive View" />
+                    </columns>
+                  </TableView>
+                  <Label contentDisplay="TOP" layoutX="139.0" layoutY="21.0" prefHeight="37.0" prefWidth="443.0" style="-fx-alignment: center;" text="Room List View ">
+                     <font>
+                        <Font name="Verdana" size="20.0" />
+                     </font></Label>
+                  <Label layoutX="68.0" layoutY="91.0" text="Room ID:">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="66.0" layoutY="124.0" text="Room Type:">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="67.0" layoutY="156.0" text="Telephone Available">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="65.0" layoutY="189.0" prefHeight="27.0" prefWidth="161.0" text="Television Available">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="67.0" layoutY="220.0" prefHeight="27.0" prefWidth="157.0" text="Exclusive View">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="roomTF_ID" layoutX="296.0" layoutY="80.0" />
+                  <RadioButton fx:id="telephone_radio" layoutX="302.0" layoutY="161.0" mnemonicParsing="false" onAction="#get_telephone" prefHeight="18.0" prefWidth="149.0" />
+                  <RadioButton fx:id="television_radio" layoutX="302.0" layoutY="193.0" mnemonicParsing="false" onAction="#get_television" prefHeight="18.0" prefWidth="140.0" />
+                  <TextField fx:id="roomTF_ExclusiveView" layoutX="297.0" layoutY="221.0" prefHeight="25.0" prefWidth="147.0" />
+                  <ChoiceBox fx:id="cb" layoutX="296.0" layoutY="128.0" prefHeight="25.0" prefWidth="149.0" />
+               </children></Pane>
+            <Pane fx:id="pan_guest" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white;">
+               <children>
+                  <Label layoutX="234.0" layoutY="37.0" prefHeight="17.0" prefWidth="240.0" style="-fx-alignment: center;" text="Guest List">
+                     <font>
+                        <Font name="Gabriola" size="31.0" />
+                     </font>
+                  </Label>
+                  <TableView fx:id="guest_table" layoutX="-2.0" layoutY="356.0" prefHeight="344.0" prefWidth="760.0">
+                    <columns>
+                      <TableColumn fx:id="guest_id" prefWidth="75.0" text="Guest ID" />
+                        <TableColumn fx:id="room_id" prefWidth="75.0" text="Room_ID" />
+                      <TableColumn fx:id="guest_name" prefWidth="99.2000732421875" text="Name" />
+                        <TableColumn fx:id="guest_address" prefWidth="75.0" text="Address" />
+                        <TableColumn fx:id="guest_city" prefWidth="64.0" text="City" />
+                        <TableColumn fx:id="guest_country" prefWidth="90.39990234375" text="Country" />
+                        <TableColumn fx:id="guest_date_of_birth" prefWidth="90.4000244140625" text="Date of Birth" />
+                        <TableColumn fx:id="guest_check_in" prefWidth="100.0" text="Check In" />
+                        <TableColumn fx:id="guest_check_out" prefWidth="103.2000732421875" text="Check Out" />
+                        <TableColumn fx:id="guest_job_title" prefWidth="107.2000732421875" text="Job_Title" />
+                        <TableColumn fx:id="guest_company" prefWidth="101.5999755859375" text="Company" />
+                        <TableColumn fx:id="guest_phone" prefWidth="96.0001220703125" text="Phone Number" />
+                        <TableColumn fx:id="guest_ccn" prefWidth="126.400146484375" text="Credit Card Number" />
+                        <TableColumn fx:id="guest_cct" prefWidth="110.39990234375" text="Credit Card Type" />
+                        <TableColumn fx:id="guest_un" prefWidth="80.7998046875" text="username " />
+                        <TableColumn fx:id="guest_pw" prefWidth="105.600341796875" text="password" />
+                    </columns>
+                  </TableView>
+                  <Button layoutX="121.0" layoutY="313.0" mnemonicParsing="false" onAction="#guest_search" prefHeight="25.0" prefWidth="158.0" text="Search" />
+                  <Button fx:id="btn_guest_view" layoutX="448.0" layoutY="313.0" mnemonicParsing="false" onAction="#guest_show" prefHeight="25.0" prefWidth="186.0" text="View All" />
+                  <Label layoutX="44.0" layoutY="123.0" text="Guest ID">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="54.0" layoutY="174.0" text="Name">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="59.0" layoutY="213.0" text="City">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="41.0" layoutY="255.0" text="Country">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="406.0" layoutY="120.0" text="Date of Birth">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="407.0" layoutY="157.0" text="Credit Card">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="406.0" layoutY="199.0" text="Check In">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="406.0" layoutY="240.0" text="Check Out">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="TF_guestid" layoutX="160.0" layoutY="121.0" prefHeight="25.0" prefWidth="155.0" />
+                  <TextField fx:id="TF_guest_name" layoutX="161.0" layoutY="174.0" prefHeight="25.0" prefWidth="152.0" />
+                  <TextField fx:id="TF_guest_city" layoutX="161.0" layoutY="214.0" />
+                  <TextField fx:id="TF_guest_country" layoutX="161.0" layoutY="255.0" />
+                  <TextField fx:id="TF_Guest_Credit_Card" layoutX="548.0" layoutY="163.0" prefHeight="25.0" prefWidth="140.0" />
+                  <DatePicker fx:id="TF_Guest_DOB" layoutX="545.0" layoutY="123.0" />
+                  <DatePicker fx:id="TF_Guest_CHECKIN" layoutX="548.0" layoutY="202.0" />
+                  <DatePicker fx:id="TF_Guest_CHECKOUT" layoutX="550.0" layoutY="241.0" prefHeight="25.0" prefWidth="174.0" />
+               </children></Pane>
+            <Pane fx:id="pane_overview" prefHeight="671.0" prefWidth="755.0" style="-fx-background-color: white;">
+               <children>
+                  <Label layoutX="123.0" layoutY="162.0" text="It will be kind of like the rulebooks">
+                     <font>
+                        <Font size="36.0" />
+                     </font>
+                  </Label>
+               </children></Pane>
+         </children>
+      </StackPane>
+      <VBox layoutY="1.0" prefHeight="691.0" prefWidth="386.0" style="-fx-background-color: e8e8f9;">
+         <children>
+            <ImageView fitHeight="150.0" fitWidth="391.0" pickOnBounds="true" preserveRatio="true" />
+            <Button fx:id="btn_overview" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#handleClick" prefHeight="49.0" prefWidth="391.0" text="Overview">
+               <graphic>
+                  <ImageView fitHeight="34.0" fitWidth="44.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../java/images/icons8_Home_32px.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="btn_manager" alignment="BASELINE_LEFT" layoutX="10.0" layoutY="160.0" mnemonicParsing="false" onAction="#handleClick" prefHeight="49.0" prefWidth="391.0" text="Manager Info">
+               <graphic>
+                  <ImageView fitHeight="34.0" fitWidth="44.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../java/images/icons8_Person_32px.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="btn_recep" alignment="BASELINE_LEFT" layoutX="10.0" layoutY="210.0" mnemonicParsing="false" onAction="#handleClick" prefHeight="49.0" prefWidth="391.0" text="Receptionist Info">
+               <graphic>
+                  <ImageView fitHeight="34.0" fitWidth="44.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../java/images/icons8_Person_32px.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="btn_room" alignment="BASELINE_LEFT" layoutX="10.0" layoutY="309.0" mnemonicParsing="false" onAction="#handleClick" prefHeight="49.0" prefWidth="391.0" text="Room_List">
+               <graphic>
+                  <ImageView fitHeight="34.0" fitWidth="44.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../java/images/icons8_Slider__32px.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="btn_booking" alignment="BASELINE_LEFT" layoutX="10.0" layoutY="359.0" mnemonicParsing="false" onAction="#handleClick" prefHeight="49.0" prefWidth="391.0" text="Bookings ">
+               <graphic>
+                  <ImageView fitHeight="34.0" fitWidth="44.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../java/images/icons8_Box_32px.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="btn_guest" alignment="BASELINE_LEFT" layoutX="10.0" layoutY="260.0" mnemonicParsing="false" onAction="#handleClick" prefHeight="49.0" prefWidth="391.0" text="Guest Info">
+               <graphic>
+                  <ImageView fitHeight="34.0" fitWidth="44.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../java/images/icons8_Person_32px.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="btn_signout" alignment="BASELINE_LEFT" layoutX="10.0" layoutY="408.0" mnemonicParsing="false" onAction="#handleClick" prefHeight="49.0" prefWidth="391.0" text="Sign Out">
+               <graphic>
+                  <ImageView fitHeight="34.0" fitWidth="44.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../java/images/icons8_Sign_Out_32px.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

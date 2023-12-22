@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="491.0" prefWidth="642.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.hms.HelloController">
+   <children>
+      <Pane layoutX="29.0" layoutY="14.0" prefHeight="162.0" prefWidth="584.0">
+         <children>
+            <Text fill="#2808fa" layoutX="169.0" layoutY="66.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hotel Management System" textAlignment="CENTER">
+               <font>
+                  <Font name="Gabriola" size="30.0" />
+               </font>
+            </Text>
+            <Text fill="#0b0736" layoutX="21.0" layoutY="137.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome to the Hotel Management System" textAlignment="CENTER" wrappingWidth="542.1367073059082">
+               <font>
+                  <Font name="Marlett" size="15.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+      <Pane layoutX="14.0" layoutY="171.0" prefHeight="214.0" prefWidth="619.0">
+         <children>
+            <Text layoutX="9.0" layoutY="59.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Select an option below for Logging In:" wrappingWidth="300.0">
+               <font>
+                  <Font name="Cambria" size="18.0" />
+               </font>
+            </Text>
+            <ChoiceBox fx:id="cb" layoutX="9.0" layoutY="108.0" prefHeight="21.0" prefWidth="300.0" />
+         </children>
+      </Pane>
+      <Button fx:id="mybutton" layoutX="190.0" layoutY="377.0" mnemonicParsing="false" onAction="#login" prefHeight="38.0" prefWidth="266.0" text="Confirm">
+         <font>
+            <Font name="Vrinda" size="16.0" />
+         </font>
+      </Button>
+      <Text fill="#a91515" layoutX="165.0" layoutY="452.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Click on the Confirm Button to go to the login page" textAlignment="CENTER">
+         <font>
+            <Font name="Times New Roman" size="15.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>
